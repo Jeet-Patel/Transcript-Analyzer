@@ -1,0 +1,239 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tableHead {
+  background-color: var(--gray-200);
+}
+
+.tableHeadCell {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--gray-300);
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--gray-200);
+  transition: background-color 0.2s;
+}
+
+.tableRow:hover {
+  background-color: var(--gray-100);
+}
+
+.tableCell {
+  padding: 0.75rem 1rem;
+}
+
+.monospace {
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.pending {
+  background-color: var(--warning);
+}
+
+.inProgress {
+  background-color: var(--info);
+}
+
+.completed {
+  background-color: var(--success);
+}
+
+.failed {
+  background-color: var(--error);
+}
+
+.actionsCell {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: white;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+}
+
+.viewButton {
+  background-color: var(--primary-500);
+}
+
+.viewButton:hover {
+  background-color: var(--primary-600);
+}
+
+.downloadButton {
+  background-color: var(--gray-500);
+}
+
+.downloadButton:hover {
+  background-color: var(--gray-600);
+}
+
+.deleteButton {
+  background-color: var(--error);
+}
+
+.deleteButton:hover {
+  background-color: var(--error-dark);
+}
+
+.deleteAllButton {
+  background-color: var(--error);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.deleteAllButton:hover {
+  background-color: var(--error-dark);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--gray-500);
+}
+
+.loadingState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--gray-500);
+}
+
+.confirmModal {
+  padding: 1rem 0;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancelButton {
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: var(--gray-400);
+}
+
+.confirmButton {
+  background-color: var(--error);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.confirmButton:hover {
+  background-color: var(--error-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header, .title {
+    color: var(--gray-100);
+  }
+  
+  .table {
+    background-color: var(--gray-800);
+    color: var(--gray-100);
+  }
+  
+  .tableHead {
+    background-color: var(--gray-700);
+  }
+  
+  .tableHeadCell {
+    border-bottom-color: var(--gray-600);
+  }
+  
+  .tableRow {
+    border-bottom-color: var(--gray-700);
+  }
+  
+  .tableRow:hover {
+    background-color: var(--gray-700);
+  }
+  
+  .emptyState {
+    color: var(--gray-400);
+  }
+
+  .cancelButton {
+    background-color: var(--gray-600);
+    color: var(--gray-200);
+  }
+
+  .cancelButton:hover {
+    background-color: var(--gray-500);
+  }
+}
