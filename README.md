@@ -76,6 +76,8 @@ cp .env.example .env
 # Start the backend
 docker-compose up --build
 
+---
+
 ### 🧩 2. Frontend Setup
 
 cd frontend
@@ -84,6 +86,7 @@ npm run dev
 
 # Visit: http://localhost:5173
 
+---
 
 ## 🎥 Demo
 Watch the recorded walkthrough:
